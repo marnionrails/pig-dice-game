@@ -33,6 +33,9 @@ The first player to accumulate 100 or more points wins the game.
    Expect(player.totalGameScore(4)).toEqual(4)
    Note: Takes return val from calcTurnScore() and adds to this.gameScore
 
+   Test 5: Player.prototype.switchPlayer()
+   Expect(1).toEqual("next player");
+
 ## Setup/Installation Requirements
 * Clone this repository to your machine: https://github.com/marnionrails/pig-dice-game
 * Navigate to root folder of the pig-dice-game repository

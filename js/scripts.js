@@ -23,11 +23,24 @@ Player.prototype.totalGameScore = function(turn) {
     this.turnScore = 0;
 }
 
+Player.prototype.switchPlayers = function() {
+    let status = 0;
+    if (this.calcTurnScore() === 1) {
+      status = "next player";
+    }
+    else 
+    {
+      status = "Roll again";
+    }
+    return status;
+}
+
 
 
 let player = new Player();
 let turn = player.calcTurnScore();
 player.totalGameScore(turn);
+console.log(player.switchPlayers());
 
 
 
