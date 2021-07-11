@@ -7,14 +7,13 @@
 console.log(Roll(1)); */
 
 function Player() {
-  this.turn = 0;       //0 means not their turn, 1 means their turn
+  this.playerTurn = "Roll Again";       //0 means not their turn, 1 means their turn
   this.turnScore = 0;
   this.gameScore = 0;
 }
 
 Player.prototype.calcTurnScore = function() {
-   let diceRoll = Math.floor(Math.random()*(6)+1)
-   this.turnScore += diceRoll;
+   this.turnScore = Math.floor(Math.random()*(6)+1);
    return this.turnScore;
 }
 
@@ -22,25 +21,59 @@ Player.prototype.totalGameScore = function(turn) {
     this.gameScore += turn;
     this.turnScore = 0;
 }
-
-Player.prototype.switchPlayers = function() {
-    let status = 0;
-    if (this.calcTurnScore() === 1) {
-      status = "next player";
+/* 
+Player.prototype.choose = function() {
+    if (this.calcTurnScore() === 1) 
+    {
+      this.playerTurn = "Next Player";
+      this.switchPlayers();
     }
     else 
     {
-      status = "Roll again";
+      this.playerTurn = 
+      if (this.PlayerTurn === "Next Player")
+      {
+        this.switchPlayers();
+      }
+      else 
+      {
+        this.playerTurn === "Roll Again";
+      }
     }
-    return status;
+  return this.playerTurn;
+} */
+
+Player.prototype.switchPlayers = function() {
+  if (player1 === this)
+  {
+    player2 = this;
+    console.log("Player2");
+    player2.events();
+  }
+  else
+  {
+    player1 = this;
+    console.log("Player1");
+    player1.events();
+  }
+}
+
+Player.prototype.events = function() {
+      let turn = this.calcTurnScore();
+      console.log(turn);
+      this.totalGameScore(turn);
+      console.log(this.gameScore)
+      // this.choose();
 }
 
 
 
-let player = new Player();
-let turn = player.calcTurnScore();
-player.totalGameScore(turn);
-console.log(player.switchPlayers());
+let player1 = new Player();
+let player2 = new Player();
+
+player1.events();
 
 
+$(document).ready(function(){
 
+})
