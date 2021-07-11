@@ -12,12 +12,22 @@ function Player() {
   this.gameScore = 0;
 }
 
-Player.prototype.calcTurnScore = function(diceResult) {
-   return this.turnScore += diceResult;
+Player.prototype.calcTurnScore = function() {
+   let diceRoll = Math.floor(Math.random()*(6)+1)
+   this.turnScore += diceRoll;
+   return this.turnScore;
+}
+
+Player.prototype.totalGameScore = function(turn) {
+    this.gameScore += turn;
+    this.turnScore = 0;
 }
 
 
+
 let player = new Player();
-console.log(player.calcTurnScore(6));
+let turn = player.calcTurnScore();
+player.totalGameScore(turn);
+
 
 
