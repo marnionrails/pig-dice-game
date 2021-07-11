@@ -26,6 +26,9 @@ The first player to accumulate 100 or more points wins the game.
    Expect(let player).toEqual(new Player())
    Note: This ensures that the constructor function works. 
 
+   Test 3: Player.prototype.calcTurnScore(diceResult)
+   Expect(player.calcTurnScore(6)).toEqual(6)
+
 ## Setup/Installation Requirements
 * Clone this repository to your machine: https://github.com/marnionrails/pig-dice-game
 * Navigate to root folder of the pig-dice-game repository
