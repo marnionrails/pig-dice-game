@@ -19,8 +19,8 @@ How do you win?
 The first player to accumulate 100 or more points wins the game.
 
 ## Specs
-1) Test: function Roll()
-   Expect(Roll(1)).toEqual("turn over")
+   Test 1: function Roll()
+   Expect(Roll(1)).toEqual("Your turn is over")
 
 ## Setup/Installation Requirements
 * Clone this repository to your machine: https://github.com/marnionrails/pig-dice-game

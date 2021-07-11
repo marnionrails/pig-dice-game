@@ -1,5 +1,7 @@
 function Roll(value) {
   if (value === 1) {
-    return "You turn is over";
+    return "Your turn is over";
   }
 }
+
+console.log(Roll(1));
