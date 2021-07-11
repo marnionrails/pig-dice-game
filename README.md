@@ -22,6 +22,10 @@ The first player to accumulate 100 or more points wins the game.
    Test 1: function Roll()
    Expect(Roll(1)).toEqual("Your turn is over")
 
+   Test 2: function Player()
+   Expect(let player).toEqual(new Player())
+   Note: This ensures that the constructor function works. 
+
 ## Setup/Installation Requirements
 * Clone this repository to your machine: https://github.com/marnionrails/pig-dice-game
 * Navigate to root folder of the pig-dice-game repository
